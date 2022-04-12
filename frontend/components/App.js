@@ -4,13 +4,18 @@ import TodoList from "./TodoList";
 
 const items = [
   {
-    name: "Organize Garage",
+    name: "Walk the dog",
     id: 1528817077286,
     completed: false,
   },
   {
-    name: "Bake Cookies",
+    name: "Learn React",
     id: 1528817084358,
+    completed: false,
+  },
+  {
+    name: "Have fun",
+    id: 1528817484358,
     completed: false,
   },
 ];

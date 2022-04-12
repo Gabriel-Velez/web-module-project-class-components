@@ -25,7 +25,13 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type='text' name='item' value={this.state.itemText} onChange={this.handleChanges} />
+        <input
+          type='text'
+          name='item'
+          value={this.state.itemText}
+          onChange={this.handleChanges}
+          placeholder='Type todo'
+        />
         <button>Submit</button>
       </form>
     );
