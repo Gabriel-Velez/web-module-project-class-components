@@ -47,11 +47,29 @@ export default class App extends React.Component {
     console.log(this.state);
   };
 
+  hideCompleted = () => {
+    document.querySelectorAll(".completed").forEach((element) => element.classList.add("gone"));
+    document.querySelector("#hideButton").classList.add("gone");
+    document.querySelector("#showButton").classList.remove("gone");
+  };
+
+  showCompleted = () => {
+    document.querySelectorAll(".gone").forEach((element) => element.classList.remove("gone"));
+    document.querySelector("#hideButton").classList.remove("gone");
+    document.querySelector("#showButton").classList.add("gone");
+  };
+
   render() {
     return (
       <div>
         <TodoList items={this.state.items} toggleItem={this.toggleItem} />
-        <Form />
+        <Form addItem={this.addItem} />
+        <button id='hideButton' onClick={this.hideCompleted}>
+          Hide Completed
+        </button>
+        <button id='showButton' className='gone' onClick={this.showCompleted}>
+          Show Completed
+        </button>
       </div>
     );
   }

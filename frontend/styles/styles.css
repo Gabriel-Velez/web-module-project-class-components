@@ -98,3 +98,11 @@ form {
 .todo p {
   display: inline;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.gone {
+  display: none;
+}
