@@ -53,7 +53,9 @@ export default class App extends React.Component {
   };
 
   hideCompleted = () => {
-    document.querySelectorAll(".completed").forEach((element) => element.classList.add("gone"));
+    document
+      .querySelectorAll(".todo.completed")
+      .forEach((element) => element.classList.add("gone"));
     document.querySelector("#hideButton").classList.add("gone");
     document.querySelector("#showButton").classList.remove("gone");
   };
